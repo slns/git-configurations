@@ -1,5 +1,5 @@
 # Para correr este ficheiro
-# bash ./configurations.sh
+# bash ./configurationsGit.sh
 
 
 
