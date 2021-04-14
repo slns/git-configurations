@@ -36,5 +36,6 @@ git config --global core.editor code
     - chore -> do tipo adicionar bibliotecas
     - docs -> do tipo adicionar documentação
     - ex: git count test
+    - mais informação em [link para conventionalcommits.org!](https://www.conventionalcommits.org)
  
 -  **git tag -a "1.0.1" -m "1.0.1"**, para fazer tags anotadas, determinar a versão , vai para o servidor git
