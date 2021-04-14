@@ -1,6 +1,11 @@
-## Para correr este ficheiro
+## Para correr este ficheiro de configurações Git
 ```
-bash ./configurations.sh
+bash ./configurationsGit.sh
+```
+
+## Para correr este ficheiro para <u>gerar um projeto React</u> com as configurações personalizadas
+```
+bash ./configurationsGit.sh
 ```
 
 ### Mudanças a nivel local, so do projeto
