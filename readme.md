@@ -5,7 +5,7 @@ bash ./configurationsGit.sh
 
 ## Para correr este ficheiro para <u>gerar um projeto React</u> com as configurações personalizadas
 ```
-bash ./configurationsGit.sh
+bash ./generateProjectReact.sh 
 ```
 
 ### Mudanças a nivel local, so do projeto
