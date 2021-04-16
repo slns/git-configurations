@@ -33,6 +33,7 @@ npm i -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugi
 npm i -D lint-staged husky &&
 npm i -D jest  &&
 npm i -D ts-jest @types/jest &&
+npm i -D faker @types/faker
 # npx ts-jest config:init
 #npm i -D jest@25 @types/jest ts-jest@25 --legacy-peer-deps
 
@@ -44,11 +45,16 @@ filename="package.json"
 search="eject\": \"react-scripts eject"
 #search='echo \\"Error: no test specified\\" && exit 1'
 echo -e " ${search}"
-replace="lint:fix\": \"eslint '.\/src\/**\/*.{ts,tsx}' --fix"
+replace="eject\": \"react-scripts eject\", \"lint:fix\": \"eslint '.\/src\/**\/*.{ts,tsx}' --fix"
 #replace="jest"
 #sed -i '' "s/$search/$replace/g" $filename
 sed -i '' "s/$search/$replace/g" $filename
 
+echo -e " ${Blue}Alterar o ficheiro tsconfig.json"
+search_1="jsx\": \"react-jsx\""
+replace_1="jsx\": \"react\", \"rootDir\": \"src\", \"baseUrl\": \"src\", \"paths\": { \"@\\/\*\": [\"\*\"] }"
+filename_1="tsconfig.json"
+sed -i '' "s/$search_1/$replace_1/g" $filename_1
 
 
 # mkdir "src"
@@ -70,20 +76,20 @@ echo "coverage" >> .gitignore
 # echo '          "dom.iterable",' >> tsconfig.json
 # echo '          "esnext",' >> tsconfig.json
 # echo '      ],' >> tsconfig.json
-# echo '      "esModuleInterop": true,' >> tsconfig.json
-# echo '      "module": "esnext",' >> tsconfig.json
-# echo '      "moduleResolution": "node",' >> tsconfig.json
-# echo '      "jsx": "react",' >> tsconfig.json
+# echo '      "esModuleInterop": true,' >> tsconfig.json#
+# echo '      "module": "esnext",' >> tsconfig.#
+# echo '      "moduleResolution": "node",' >> tsconfig.json#
+# echo '      "jsx": "react",' >> tsconfig.json#
 # echo '      "rootDir": "src",' >> tsconfig.json
 # echo '      "baseUrl": "src",' >> tsconfig.json
-# echo '      "allowJs": true,' >> tsconfig.json
-# echo '      "skipLibCheck": true,' >> tsconfig.json
-# echo '      "allowSyntheticDefaultImports": true,' >> tsconfig.json
-# echo '      "strict": true,' >> tsconfig.json
-# echo '      "forceConsistentCasingInFileNames": true,' >> tsconfig.json
-# echo '      "resolveJsonModule": true,' >> tsconfig.json
-# # echo '      "isolatedModules": true,' >> tsconfig.json
-# echo '      "noEmit": true,' >> tsconfig.json
+# echo '      "allowJs": true,' >> tsconfig.json#
+# echo '      "skipLibCheck": true,' >> tsconfig.json#
+# echo '      "allowSyntheticDefaultImports": true,' >> tsconfig.json#
+# echo '      "strict": true,' >> tsconfig.json#
+# echo '      "forceConsistentCasingInFileNames": true,' >> tsconfig.json#
+# echo '      "resolveJsonModule": true,' >> tsconfig.json#
+# # echo '      "isolatedModules": true,' >> tsconfig.json#
+# echo '      "noEmit": true,' >> tsconfig.json#
 # echo '  },' >> tsconfig.json
 # echo '  "include": [' >> tsconfig.json
 # echo '      "src"' >> tsconfig.json
